@@ -45,6 +45,10 @@ const createStudent = () => {
   renderCards(student);
 };
 
+const expelStudent = () => {
+  
+};
+
 const events = () => {
   // FORM
   const studentForm = document.querySelector('form');
