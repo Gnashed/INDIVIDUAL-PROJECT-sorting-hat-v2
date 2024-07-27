@@ -12,6 +12,19 @@ const renderCards = (array) => {
   renderToDom('#render-students-here', cards);
 };
 
+const filterStudents = (array, filter) => {
+  const filteredArray = [];
+
+  array.forEach(student => {
+    if (student.house === filter) {
+      filteredArray.push(student);
+    }
+  });
+
+  renderCards(filteredArray);
+  return filteredArray;
+};
+
 const createStudent = () => {
   const availableHouses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   
@@ -32,12 +45,38 @@ const createStudent = () => {
 };
 
 const events = () => {
+  // FORM
   const studentForm = document.querySelector('form');
+
+  // Filter Buttons
+  const gryffindorFilterBtn = document.querySelector('.gryffindor-filter');
+  const hufflepuffFilterBtn = document.querySelector('.hufflepuff-filter');
+  const ravenclawFilterBtn = document.querySelector('.ravenclaw-filter');
+  const slytherinFilterBtn = document.querySelector('.slytherin-filter');
+  const clearFilterBtn = document.querySelector('.clear-filter');
+
+
 
   studentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     createStudent();
     studentForm.reset();
+  });
+
+  gryffindorFilterBtn.addEventListener('click', () => {
+    filterStudents(student, 'Gryffindor');
+  });
+  hufflepuffFilterBtn.addEventListener('click', () => {
+    filterStudents(student, 'Hufflepuff');
+  });
+  ravenclawFilterBtn.addEventListener('click', () => {
+    filterStudents(student, 'Ravenclaw');
+  });
+  slytherinFilterBtn.addEventListener('click', () => {
+    filterStudents(student, 'Slytherin');
+  });
+  clearFilterBtn.addEventListener('click', () => {
+    renderCards(student);
   });
 };
 
