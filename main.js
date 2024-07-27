@@ -57,6 +57,8 @@ const expelStudent = () => {
       const [ , id] = e.target.id.split('--');
       // Check the student array to find the object. Compare its id to the id we destructured above. Store the result of the comparison.
       const index = student.findIndex(obj => obj.id === Number(id));
+      // Push the object to expelled_student array before deleting it.
+      expelled_student.push(student[index]);
       // Remove the student from the student array.
       student.splice(index, 1);
       // Render the updated array.
