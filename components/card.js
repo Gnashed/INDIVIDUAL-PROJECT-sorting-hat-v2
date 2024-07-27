@@ -9,8 +9,10 @@ export const card = (object) => {
 
         <img src="${object.imageUrl}" alt="picture of ${object.name}">
         
+        <p style="font-weight: bold;">${object.house}</p>
+
         <div class="text-center">
-          <button class="btn btn-danger" id="delete-obj-card-btn--${object.id}">Delete</button>
+          <button class="btn btn-danger" id="delete-obj-card-btn--${object.id}">Expel</button>
         </div>
       </div>
     </div> <!-- ./card --></div>`;
