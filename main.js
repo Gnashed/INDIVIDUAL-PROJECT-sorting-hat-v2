@@ -30,6 +30,7 @@ const createStudent = () => {
   
   const assignHouse = (array) => {
     const houseIndex = Math.floor((Math.random() * array.length) + 1);
+    // console.log('House Index: ', houseIndex);
     return array[houseIndex];
   };
 
@@ -55,8 +56,7 @@ const events = () => {
   const slytherinFilterBtn = document.querySelector('.slytherin-filter');
   const clearFilterBtn = document.querySelector('.clear-filter');
 
-
-
+  // Events
   studentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     createStudent();
