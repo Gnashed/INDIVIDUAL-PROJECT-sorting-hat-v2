@@ -1,7 +1,7 @@
 export const card = (object) => {
   return `
   <div class="row">
-    <div class="card style="width: 10rem;">
+    <div class="card" style="width: 24rem;">
       <div class="card-body">
         <header class="text-center">
           <h2 class="card-title">${object.name}</h2>
