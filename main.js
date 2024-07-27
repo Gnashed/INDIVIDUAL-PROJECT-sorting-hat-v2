@@ -30,6 +30,7 @@ const createStudent = () => {
   
   const assignHouse = (array) => {
     const houseIndex = Math.floor((Math.random() * array.length) + 1);
+    // console.log('House Index: ', houseIndex);
     return array[houseIndex];
   };
 
@@ -44,6 +45,26 @@ const createStudent = () => {
   renderCards(student);
 };
 
+const expelStudent = () => {
+  // Target the parent element of the cards.
+  const parentElementForCards = document.querySelector('#render-students-here');
+
+  // Capture clicks.
+  parentElementForCards.addEventListener('click', (e) => {
+    // Check 'e.target.id' includes the string 'delete'.
+    if (e.target.id.includes('delete')) {
+      // Split the array. Store the number in a variable. This will be the id.
+      const [ , id] = e.target.id.split('--');
+      // Check the student array to find the object. Compare its id to the id we destructured above. Store the result of the comparison.
+      const index = student.findIndex(obj => obj.id === Number(id));
+      // Remove the student from the student array.
+      student.splice(index, 1);
+      // Render the updated array.
+      renderCards(student);
+    }
+  });
+};
+
 const events = () => {
   // FORM
   const studentForm = document.querySelector('form');
@@ -55,8 +76,7 @@ const events = () => {
   const slytherinFilterBtn = document.querySelector('.slytherin-filter');
   const clearFilterBtn = document.querySelector('.clear-filter');
 
-
-
+  // Events
   studentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     createStudent();
@@ -85,4 +105,5 @@ const startApp = () => {
 };
 
 startApp();
+expelStudent();
 events();
