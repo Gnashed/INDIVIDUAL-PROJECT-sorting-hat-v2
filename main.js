@@ -1,5 +1,6 @@
 import { renderToDom } from "./utils/renderToDom.js";
 import { card } from "./components/card.js";
+import { expelledCard } from "./components/expelledCard.js";
 import { student, expelled_student } from "./data/sampleData.js";
 
 const renderCards = (array) => {
@@ -16,7 +17,7 @@ const renderExpelledStudents = (expelledArray) => {
   let cards = '';
 
   expelledArray.forEach((obj) => {
-    cards += card(obj);
+    cards += expelledCard(obj);
   });
 
   renderToDom('#render-expelled-students-here', cards);
