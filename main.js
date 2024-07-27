@@ -12,6 +12,16 @@ const renderCards = (array) => {
   renderToDom('#render-students-here', cards);
 };
 
+const renderExpelledStudents = (expelledArray) => {
+  let cards = '';
+
+  expelledArray.forEach((obj) => {
+    cards += card(obj);
+  });
+
+  renderToDom('#render-expelled-students-here', cards);
+};
+
 const filterStudents = (array, filter) => {
   const filteredArray = [];
 
@@ -63,6 +73,8 @@ const expelStudent = () => {
       student.splice(index, 1);
       // Render the updated array.
       renderCards(student);
+      // Render the expelled students.
+      renderExpelledStudents(expelled_student);
     }
   });
 };
@@ -104,6 +116,7 @@ const events = () => {
 
 const startApp = () => {
   renderCards(student);
+  renderExpelledStudents(expelled_student);
 };
 
 startApp();
