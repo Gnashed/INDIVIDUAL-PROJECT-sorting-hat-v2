@@ -16,11 +16,8 @@ const createStudent = () => {
   const availableHouses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   
   const assignHouse = (array) => {
-    array.forEach((house) => {
-      const houseIndex = Math.random() * array.length;
-      console.log(houseIndex);
-      return houseIndex;
-    })
+    const houseIndex = Math.floor((Math.random() * array.length) + 1);
+    return array[houseIndex];
   };
 
   const newStudent = {
@@ -40,6 +37,7 @@ const events = () => {
   studentForm.addEventListener('submit', (e) => {
     e.preventDefault();
     createStudent();
+    studentForm.reset();
   });
 };
 
