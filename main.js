@@ -49,18 +49,36 @@ const createStudent = () => {
     id: student.length + 1,
     name: document.querySelector('#student-name').value,
     house: assignHouse(availableHouses),
-    imageUrl: 'https://loremflickr.com/320/200/girl-from-harry-potter'
+    imageUrl: 'https://loremflickr.com/320/200/girl-from-harry-potter',
+    isExpelled: false
   };
 
   student.push(newStudent);
   renderCards(student);
 };
 
-const expelStudent = () => {
-  // Target the parent element of the cards.
+const events = () => {
+  // FORM
+  const studentForm = document.querySelector('form');
+
+  // To render students
   const parentElementForCards = document.querySelector('#render-students-here');
 
-  // Capture clicks.
+
+  // Filter Buttons
+  const gryffindorFilterBtn = document.querySelector('.gryffindor-filter');
+  const hufflepuffFilterBtn = document.querySelector('.hufflepuff-filter');
+  const ravenclawFilterBtn = document.querySelector('.ravenclaw-filter');
+  const slytherinFilterBtn = document.querySelector('.slytherin-filter');
+  const clearFilterBtn = document.querySelector('.clear-filter');
+
+  // Events
+  studentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    createStudent();
+    studentForm.reset();
+  });
+
   parentElementForCards.addEventListener('click', (e) => {
     // Check 'e.target.id' includes the string 'delete'.
     if (e.target.id.includes('delete')) {
@@ -77,25 +95,6 @@ const expelStudent = () => {
       // Render the expelled students.
       renderExpelledStudents(expelled_student);
     }
-  });
-};
-
-const events = () => {
-  // FORM
-  const studentForm = document.querySelector('form');
-
-  // Filter Buttons
-  const gryffindorFilterBtn = document.querySelector('.gryffindor-filter');
-  const hufflepuffFilterBtn = document.querySelector('.hufflepuff-filter');
-  const ravenclawFilterBtn = document.querySelector('.ravenclaw-filter');
-  const slytherinFilterBtn = document.querySelector('.slytherin-filter');
-  const clearFilterBtn = document.querySelector('.clear-filter');
-
-  // Events
-  studentForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    createStudent();
-    studentForm.reset();
   });
 
   gryffindorFilterBtn.addEventListener('click', () => {
@@ -121,5 +120,4 @@ const startApp = () => {
 };
 
 startApp();
-expelStudent();
 events();
