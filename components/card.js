@@ -7,7 +7,7 @@ export const card = (object) => {
           <h4 class="card-title">${object.name}</h4>
         </header>
 
-        <img src="${object.imageUrl}" alt="picture of ${object.name}">
+        <img src="${object.imageUrl}" alt="picture of ${object.name}" class="mb-2">
         
         <p style="font-weight: bold; font-size:1.25rem;">${object.house}</p>
 

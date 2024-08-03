@@ -9,8 +9,8 @@ export const expelledCard = (object) => {
 
         <img src="${object.imageUrl}" alt="picture of ${object.name}">
 
-        <div class="text-center">
-          <p><strong>${object.name}</strong> has been banished to the dark army! 😈</p>
+        <div class="text-center mt-2" style="background-color: yellow;">
+          <p style="color: black;"><strong>${object.name}</strong> has been banished to the dark army! 😈</p>
         </div>
       </div>
     </div> <!-- ./card --></div>`;
