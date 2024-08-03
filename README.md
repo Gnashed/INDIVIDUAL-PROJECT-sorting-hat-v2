@@ -24,4 +24,4 @@ You can also expel a student which will render their card to the expelled studen
 <img width="1148" alt="Your Alt" src="./assets/expelledArmy-screenshot.png">
 
 ## Contributors
-- [YOUR NAME](https://github.com/gnashed)
+- Tion Blackmon (https://github.com/gnashed)
