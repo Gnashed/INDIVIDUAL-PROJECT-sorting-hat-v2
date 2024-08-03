@@ -1,6 +1,6 @@
 export const expelledCard = (object) => {
   return `
-  <div class="row">
+  <div class="row animate__animated animate__fadeInLeftBig">
     <div class="card" style="width: 24rem;">
       <div class="card-body">
         <header class="text-center">

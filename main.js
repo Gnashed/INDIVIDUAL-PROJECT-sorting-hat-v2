@@ -40,8 +40,8 @@ const createStudent = () => {
   const availableHouses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   
   const assignHouse = (array) => {
-    const houseIndex = Math.floor((Math.random() * array.length) + 1);
-    // console.log('House Index: ', houseIndex);
+    const houseIndex = Math.floor((Math.random() * array.length));
+    console.log('House Index: ', houseIndex);
     return array[houseIndex];
   };
 
