@@ -1,3 +1,14 @@
 .classroom-col, .expelled-classroom-col {
   border: 2px solid black;
 }
+
+/* form {
+  border: 2px solid black;
+} */
+.filter-buttons button {
+  width: 10rem;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
