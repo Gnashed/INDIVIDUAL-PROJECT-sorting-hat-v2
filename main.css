@@ -2,15 +2,17 @@ body {
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 700;
   font-style: normal;
+  background-color: #FCECC9;
 }
 
 .classroom-col, .expelled-classroom-col {
-  border: 2px solid black;
+  border: 1px solid #2D3047;
 }
 
-/* form {
-  border: 2px solid black;
-} */
+.card {
+  background-color: #55917F;
+  color: white;
+}
 
 .filter-buttons button {
   font-weight: bold;
@@ -24,20 +26,15 @@ body {
 
 .render-students-here, .render-expelled-students-here {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
 .form-elements {
-  border: 2px solid;
   display: flex;
   align-items: baseline;
 }
 
 .col-3 button {
   width: 6rem;
-}
-
-.classroom-col, .expelled-classroom-col {
-  
 }

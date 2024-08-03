@@ -1,15 +1,15 @@
 export const card = (object) => {
   return `
   <div class="row">
-    <div class="card mb-4" style="width: 30rem;">
+    <div class="card mb-4 animate__animated animate__fadeInDown" style="width: 30rem;">
       <div class="card-body">
         <header class="text-center">
-          <h2 class="card-title">${object.name}</h2>
+          <h4 class="card-title">${object.name}</h4>
         </header>
 
         <img src="${object.imageUrl}" alt="picture of ${object.name}">
         
-        <p style="font-weight: bold;">${object.house}</p>
+        <p style="font-weight: bold; font-size:1.25rem;">${object.house}</p>
 
         <div class="text-center">
           <button class="btn btn-danger" id="delete-obj-card-btn--${object.id}">Expel</button>
