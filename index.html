@@ -4,15 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sorting Hat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div id="app">
 
-    <!-- HEADER -->
-    <div class="container text-center">
-      <section class="row mt-5">
+    <div class="container-fluid text-center">
+      <!-- HEADER -->
+      <section class="header row mt-3">
         <h1 class="mb-3">Welcome to Sorting Hat</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex impedit itaque error accusantium hic excepturi voluptatum facere ad.</p>
         <p>Instructions: dolorum odio nam impedit ex corrupti dolores provident minus voluptate expedita.</p>
@@ -20,37 +27,43 @@
       <!-- ./HEADER -->
       
       <!-- Form -->
-      <section class="row mt-3">
-        <h3>Enter First Year's Name</h3>
-        <form class="container">
-          <div class="row">
-            <label for="student-name" class="form-label col">Student </label>
-            <input type="text" placeholder="Gordon Gecko" class="col form-control" id="student-name" required>
-            <button type="submit" class="col">Sort</button>
+      <section class="form-row row">
+        <h3 class="form-instructions mt-2">Enter First Year's Name</h3>
+        <form>
+          <div class="form-elements row mt-2">
+            <div class="col-1">
+              <label for="student-name" class="form-label">Student</label>
+            </div>
+            <div class="col-8">
+              <input type="text" placeholder="Gordon Gecko" class="form-control" id="student-name" required>
+            </div>
+            <div class="col-3">
+              <button type="submit" class="btn btn-primary btn-sm">Sort</button>
+            </div>
           </div>
         </form>
       </section>
       <!-- ./Form -->
 
       <!-- Filter Buttons -->
-        <section class="row row-cols-5 mt-5">
-          <button class="gryffindor-filter btn btn-warning btn-sm col mx-1">Gryffindor</button>
-          <button class="hufflepuff-filter btn btn-danger btn-sm col mx-1">Hufflepuff</button>
-          <button class="ravenclaw-filter btn btn-info btn-sm col mx-1">Ravenclaw</button>
-          <button class="slytherin-filter btn btn-info btn-sm col mx-1">Slytherin</button>
-          <button class="clear-filter btn btn-dark btn-sm col mx-1">All</button>
+        <section class="filter-buttons row row-cols-5 mt-5">
+          <button class="gryffindor-filter btn btn-warning btn-sm mx-1">Gryffindor</button>
+          <button class="hufflepuff-filter btn btn-danger btn-sm mx-1">Hufflepuff</button>
+          <button class="ravenclaw-filter btn btn-info btn-sm mx-1">Ravenclaw</button>
+          <button class="slytherin-filter btn btn-info btn-sm mx-1">Slytherin</button>
+          <button class="clear-filter btn btn-dark btn-sm mx-1">All</button>
         </section>
       <!-- ./Filter Buttons -->
       
       <!-- classroom -->
-      <section class="classroom row mt-5">
+      <section class="classroom row mt-5 mx-1">
         <div class="classroom-col col mx-2">
-          <h4 class="my-4">First Year's</h4>
-          <div id="render-students-here"></div>
+          <h3 class="my-4">First Year's</h4>
+          <div class="render-students-here"></div>
         </div>
         <div class="expelled-classroom-col col mx-2">
-          <h4 class="my-4">He Who Must Not Be Named's Army</h4>
-          <div id="render-expelled-students-here"></div>
+          <h3 class="my-4">He Who Must Not Be Named's Army</h4>
+          <div class="render-expelled-students-here"></div>
         </div>
       </section>
       <!-- ./classroom -->

@@ -10,7 +10,7 @@ const renderCards = (array) => {
     cards += card(obj);
   });
 
-  renderToDom('#render-students-here', cards);
+  renderToDom('.render-students-here', cards);
 };
 
 const renderExpelledStudents = (expelledArray) => {
@@ -20,7 +20,7 @@ const renderExpelledStudents = (expelledArray) => {
     cards += expelledCard(obj);
   });
 
-  renderToDom('#render-expelled-students-here', cards);
+  renderToDom('.render-expelled-students-here', cards);
 };
 
 const filterStudents = (array, filter) => {
@@ -37,11 +37,12 @@ const filterStudents = (array, filter) => {
 };
 
 const createStudent = () => {
+  const targetCard = document.querySelector('.card');
   const availableHouses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   
   const assignHouse = (array) => {
-    const houseIndex = Math.floor((Math.random() * array.length) + 1);
-    // console.log('House Index: ', houseIndex);
+    const houseIndex = Math.floor((Math.random() * array.length));
+    console.log('House Index: ', houseIndex);
     return array[houseIndex];
   };
 
@@ -62,7 +63,7 @@ const events = () => {
   const studentForm = document.querySelector('form');
 
   // To render students
-  const parentElementForCards = document.querySelector('#render-students-here');
+  const parentElementForCards = document.querySelector('.render-students-here');
 
 
   // Filter Buttons

@@ -1,3 +1,68 @@
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: #EA2B1F;
+}
+
 .classroom-col, .expelled-classroom-col {
-  border: 2px solid black;
+  border: 1px solid #2D3047;
+}
+
+.card {
+  background-color: #110B11;
+  color: white;
+}
+
+.col-1 label {
+  color: #fff;
+}
+
+#student-name {
+  background-color: #110B11;
+  color: #FCECC9;
+  border: none;
+}
+
+.header, .classroom-col h3, .expelled-classroom-col h3 {
+  color: #FCECC9;
+}
+
+.classroom-col h3, .expelled-classroom-col h3 {
+  font-size: 2rem;
+}
+
+.form-instructions {
+  font-weight: bold;
+  color: #fff;
+}
+
+.filter-buttons button {
+  font-weight: bold;
+  font-size: 1.25rem;
+  width: 10rem;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.render-students-here, .render-expelled-students-here {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.form-elements {
+  display: flex;
+  align-items: baseline;
+}
+
+.col-3 button {
+  width: 6rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
 }
