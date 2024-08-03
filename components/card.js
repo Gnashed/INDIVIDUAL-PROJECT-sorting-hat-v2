@@ -1,7 +1,7 @@
 export const card = (object) => {
   return `
   <div class="row">
-    <div class="card animate__animated animate__bounceInDown mb-4" style="width: 30rem;">
+    <div class="card animate__animated animate__fadeInDown mb-4" style="width: 30rem;">
       <div class="card-body">
         <header class="text-center">
           <h4 class="card-title">${object.name}</h4>
