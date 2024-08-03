@@ -37,6 +37,7 @@ const filterStudents = (array, filter) => {
 };
 
 const createStudent = () => {
+  const targetCard = document.querySelector('.card');
   const availableHouses = ['Gryffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'];
   
   const assignHouse = (array) => {
