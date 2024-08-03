@@ -2,7 +2,7 @@ body {
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: #FCECC9;
+  background-color: #EA2B1F;
 }
 
 .classroom-col, .expelled-classroom-col {
@@ -10,8 +10,16 @@ body {
 }
 
 .card {
-  background-color: #55917F;
+  background-color: #110B11;
   color: white;
+}
+
+.header, .classroom-col h3, .expelled-classroom-col h3 {
+  color: #FCECC9;
+}
+
+.classroom-col h3, .expelled-classroom-col h3 {
+  font-size: 2rem;
 }
 
 .filter-buttons button {
@@ -37,4 +45,9 @@ body {
 
 .col-3 button {
   width: 6rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 5rem;
 }
